@@ -6,6 +6,7 @@
   --button-color: #8e74a8;
   --buton-hover: #e7daf5;
   --icon-color: #ee764b;
+  --highlight: #a8a885;
 }
 
 body {
@@ -57,6 +58,7 @@ header {
   justify-content: space-around;
   align-items: center;
   background-color: var(--background-color);
+  width: 100%;
 }
 
 .logo {
@@ -70,6 +72,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin-left: 20px;
 }
 
@@ -82,12 +85,6 @@ nav > ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-
-@media (max-width: 600px) {
-  header {
-    flex-wrap: wrap;
-  }
 }
 
 @media (max-width: 650px) {
@@ -116,7 +113,7 @@ nav > ul {
   }
 
   nav > ul {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 
@@ -135,6 +132,12 @@ nav > ul {
   word-wrap: break-word;
 }
 
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #hero input[type="email"] {
   max-width: 275px;
   width: 100%;
@@ -145,7 +148,7 @@ nav > ul {
   width: 100%;
   max-width: 300px;
   height: 30px;
-  margin: 15px 0;
+  margin: 15px;
   border: 0;
   background-color: var(--button-color);
 }
@@ -158,6 +161,10 @@ nav > ul {
 @media (max-width: 650px) {
   #hero {
     margin-top: 120px;
+  }
+
+  form {
+    flex-wrap: wrap;
   }
 }
 
@@ -201,5 +208,82 @@ nav > ul {
 @media (max-width: 650px) {
   #features {
     margin-top: 0;
+  }
+}
+
+#faq {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+#faq > iframe {
+  padding: 10px;
+}
+
+#faq > ul {
+  padding: 10px;
+  margin: 50px;
+}
+
+#buy {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+.product {
+  text-align: center;
+  width: 70%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.product > .level {
+  background-color: var(--highlight);
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.product > h2 {
+  margin-top: 15px;
+}
+
+.product > ul {
+  margin: 15px 0;
+}
+
+.product > ul > li {
+  padding: 5px 0;
+}
+
+.product > button {
+  border: 0;
+  margin: 15px 0;
+  background-color: var(--button-color);
+  font-weight: 400;
+}
+
+.product > button:hover {
+  background-color: var(--buton-hover);
+  transition: background-color 1s;
+}
+
+@media (max-width: 600px) {
+  #buy {
+    grid-template-columns: 1fr;
+  }
+
+  .product {
+    max-width: 300px;
+    margin-bottom: 10px;
   }
 }
