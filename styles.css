@@ -7,6 +7,7 @@
   --buton-hover: #e7daf5;
   --icon-color: #ee764b;
   --highlight: #a8a885;
+  --footer: #ccccca;
 }
 
 body {
@@ -286,4 +287,29 @@ form {
     max-width: 300px;
     margin-bottom: 10px;
   }
+}
+
+footer {
+  background-color: var(--footer);
+  padding: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  font-weight:100;
+  color: rgb(101, 99, 99);
 }
